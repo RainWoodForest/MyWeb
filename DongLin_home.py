@@ -27,21 +27,13 @@ def page1():  # 我的个人资料
     st.subheader(":green[:link: 我其他平台的个人主页]")
     col1, col2, col3, col4, col5, col6, col7 = st.columns([1.5, 1.8, 2, 2, 1.5, 1.5, 1.5])
     with col1:
-        btn1 = st.button('GitHub')
+        st.link_button('Github', 'https://github.com/RainWoodForest')
     with col2:
-        btn2 = st.button('哔哩哔哩')
+        st.link_button('哔哩哔哩', 'https://space.bilibili.com/672508011')
     with col3:
-        btn3 = st.button('编程猫社区')
+        st.link_button('编程猫社区', 'https://shequ.codemao.cn/user/939345')
     with col4:
-        btn4 = st.button('神奇代码岛')
-    if(btn1):
-        webbrowser.open("https://github.com/RainWoodForest")
-    if(btn2):
-        webbrowser.open("https://space.bilibili.com/672508011")
-    if(btn3):
-        webbrowser.open("https://shequ.codemao.cn/user/939345")
-    if(btn4):
-        webbrowser.open("https://box3.codemao.cn/u/12753431")
+        st.link_button('神奇代码岛', 'https://box3.codemao.cn/u/12753431')
         
 def page2():  # 网站代码展示
     with open("DongLin_Code.txt", encoding="utf-8") as c:

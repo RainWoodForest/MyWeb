@@ -249,7 +249,8 @@ def page7():  # 我的留言区
                 f.write(message)
 
 def page_test():
-    pass
+    components.iframe('''//player.bilibili.com/player.html?aid=326973582&bvid=BV1Kw411L71V&cid=1423155357&p=1''', height = 500)
+    # <iframe src="//player.bilibili.com/player.html?aid=326973582&bvid=BV1Kw411L71V&cid=1423155357&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 def page_about():
     components.iframe("//player.bilibili.com/player.html?aid=1100320038&bvid=BV1gA4m157HX&cid=1432932265&p=1", height=520)

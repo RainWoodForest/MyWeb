@@ -81,7 +81,7 @@ def page4():  # 我的图片尺寸调整工具
         with cab_2:
             new_height = st.number_input(label="请输入新图片的高", min_value=1, value=old_height, step=1)
         if(st.button("确定")):
-            st.write("处理结果：")
+            st.write(f"处理结果({new_width}×{new_height})：")
             img1 = img.resize(( int(new_width), int(new_height) ))
             st.image(img1)
             st.info("处理好后的图片可以直接右击并选择【将图像另存为】将其保存到本地")

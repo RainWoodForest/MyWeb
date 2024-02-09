@@ -12,7 +12,7 @@ st.set_page_config(
 )
 
 # 使用streamlit库中所有功能几乎都以组件的形式调用
-page = st.sidebar.radio("我的首页", ["我的个人资料", "我的图片换色工具", "我的图片尺寸调整工具", "我的图片滤镜工具", "我的智慧词典", "我的留言区", "春节解锁此页", "关于此网站"])  # 使用sidebar()组件创建侧边栏结构
+page = st.sidebar.radio("我的首页", ["我的个人资料", "我的图片换色工具", "我的图片尺寸调整工具", "我的图片滤镜工具", "我的智慧词典", "我的留言区", "2024新年快乐", "关于此网站"])  # 使用sidebar()组件创建侧边栏结构
 # 音乐播放
 st.subheader(":green[:musical_note: Relaxing Light Background - AudioCoffee]")
 with open("./DongLin_BGM1.mp3", "rb") as f:
@@ -249,14 +249,13 @@ def page7():  # 我的留言区
                 f.write(message)
 
 def page_test():
-    components.iframe('''//player.bilibili.com/player.html?aid=326973582&bvid=BV1Kw411L71V&cid=1423155357&p=1''', height = 500)
-    # <iframe src="//player.bilibili.com/player.html?aid=326973582&bvid=BV1Kw411L71V&cid=1423155357&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    st.subheader("测试页面")
 
 def page_about():
     components.iframe("//player.bilibili.com/player.html?aid=1100320038&bvid=BV1gA4m157HX&cid=1432932265&p=1", height=520)
 
 def page_happy2024():
-    st.title("新年快乐, 春节解锁此页, 敬请期待")
+    components.iframe("//player.bilibili.com/player.html?aid=1700327836&bvid=BV14K421C7FL&cid=1434238343&p=1", height=520)
 
 def img_change(img, rc, gc, bc):
     width, height = img.size
@@ -329,5 +328,5 @@ elif(page == "测试"):
     page_test()
 elif(page == "关于此网站"):
     page_about()
-elif(page == "春节解锁此页"):
+elif(page == "2024新年快乐"):
     page_happy2024()
